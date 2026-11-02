@@ -105,3 +105,23 @@ float calculerMoyenneGenerale(int nb,int tab[30][3])
     }
     return el/nb;
 }
+int trouverMeilleureNoteControle(int nb,int cho,int tab[30][3])
+{
+    int max=0;
+    for (int i = 0; i < nb; i++)
+    {
+        if (tab[i][cho-1]>max)
+        {
+            max=tab[i][cho-1];
+        }
+    }
+    return max;
+}
+void afficherMeilleuresNotes (int nb, int tab[30][3])
+{
+    for (int x = 0; x < 3; x++)
+    {
+        printf("Meilleure note au controle %d : %d",x,trouverMeilleureNoteControle(nb,x+1,tab));
+    }
+    return;
+}
