@@ -50,3 +50,44 @@ int saisirNombreEleves(void)
     }
     return i;
 }
+void saisirNotes(int nb, int tab[30][3])
+{
+    int notin=-5;
+    for (int i = 0; i < nb; i++)
+    {
+        printf("Eleve %d \n",i+1);
+        for (int j = 1; j < 4; j++)
+        {   while (notin<0 || notin>20)
+            {
+                printf("Note du controle %d (0 a 20) :",j);
+                scanf("%d",&notin);
+                if (notin<0 || notin>20)
+                {
+                    printf("Valeur impossible.\n");
+                }
+            }
+            tab[i][j-1]=notin;
+            notin=-5;
+        }
+    }
+    return;
+}
+
+void affichage_Notes(int nb,int tab[30][3])
+{
+    printf("Tableau des notes \n Eleve  C1  C2  C3 \n");
+    for (int i = 0; i < nb; i++)
+    {
+        if (i<9){printf("    %d",i+1);} else {printf("   %d",i+1);}
+        for (int j = 0; j < 3; j++)
+        {
+            if (tab[i][j]<10){
+                printf("   %d",tab[i][j]);
+            }else{
+                printf("  %d",tab[i][j]);
+            }
+        }
+        printf("\n");
+    }
+    return;
+}
