@@ -121,7 +121,7 @@ void afficherMeilleuresNotes (int nb, int tab[30][3])
 {
     for (int x = 0; x < 3; x++)
     {
-        printf("Meilleure note au controle %d : %d",x,trouverMeilleureNoteControle(nb,x+1,tab));
+        printf("Meilleure note au controle %d : %d \n",x+1,trouverMeilleureNoteControle(nb,x+1,tab));
     }
     return;
 }
