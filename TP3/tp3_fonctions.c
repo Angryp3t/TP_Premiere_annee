@@ -93,6 +93,15 @@ void affichage_Notes(int nb,int tab[30][3])
 }
 float calculerMoyenneEleve(int id,int tab[30][3])
 {
-    int i=tab[id-1][0]+tab[id-1][1]+tab[id-1][2];
+    float i=tab[id-1][0]+tab[id-1][1]+tab[id-1][2];
     return i/3;
+}
+float calculerMoyenneGenerale(int nb,int tab[30][3])
+{
+    float el = 0;
+    for (int i = 1; i < nb+1; i++)
+    {
+        el=el+calculerMoyenneEleve(i,tab);
+    }
+    return el/nb;
 }
