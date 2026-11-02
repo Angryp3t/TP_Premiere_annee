@@ -36,4 +36,5 @@ int lire_menu(int a)
         printf("Incomprehensible\n");
         break;
     }
+    return a;
 }
