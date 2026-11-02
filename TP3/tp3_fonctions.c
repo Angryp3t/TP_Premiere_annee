@@ -38,3 +38,15 @@ int lire_menu(int a)
     }
     return a;
 }
+int saisirNombreEleves(void)
+{
+    int i;
+    while (i>30 || i<1)
+    {
+        printf("Entrez le nombre d'eleves (1 a 30) : ");
+        scanf("%d",&i);
+        if (i>30 || i<1)
+        {printf("Valeur invalide. \n");}
+    }
+    return i;
+}
