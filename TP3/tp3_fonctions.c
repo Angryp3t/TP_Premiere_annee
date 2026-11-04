@@ -137,8 +137,8 @@ void afficherMeilleuresNotes (int nb, int tab[30][3])
 void afficher_menu(void)
 {
     printf("=== BANQUE - Distributeur ===\n");
-    printf("1 - Faire un retrait");
-    printf("2 - Quitter");
+    printf("1 - Faire un retrait\n");
+    printf("2 - Quitter\n");
 }
 int saisir_montant(void);
 int montant_valide(int montant);

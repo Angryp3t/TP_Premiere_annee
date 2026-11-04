@@ -58,20 +58,21 @@ int main(void)
     //==============================================    
     // Exo 2 =======================================
     //============================================== 
-    printf("Voici L'exo 2 :");
+    printf("Voici L'exo 2 :\n");
     menu = 3;
     while (menu==3)
     {
         afficher_menu();
         printf("Votre choix : ");
-        scanf("%d",menu);
+        scanf("%d",&menu);
         printf("\n");
         switch (menu)
         {
         case 1:
             break;
         
-        case 0:
+        case 2:
+            printf("en revoir !");
             return 0;
             break;
 
@@ -79,6 +80,7 @@ int main(void)
             printf("Choix invalide veuillez retentez.\n");
             break;
         }
+        menu=3;
     }
     
 
