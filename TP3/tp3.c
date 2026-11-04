@@ -3,10 +3,14 @@
 
 int main(void)
 {
+    //==============================================    
+    // Exo 1 =======================================
+    //============================================== 
     int menu=7;
     int id=0;
     int tableau[30][3];
     int nb=0;
+    printf("Vous etes de base sur le menue de l'exo 1, pour passez à l'exo 2 appuyez sur quitter.\n");
     while (menu ==7)
     {    
         affichage_options();
@@ -43,11 +47,16 @@ int main(void)
             afficherMeilleuresNotes (nb, tableau);
             break;
         case 0:
-            return 0;
             break;
         default:
             printf("Incomprehensible : reessayez\n");
             break;
         }menu=7;}
+
+    //==============================================    
+    // Exo 2 =======================================
+    //============================================== 
+
+    
     return 0;
 }
