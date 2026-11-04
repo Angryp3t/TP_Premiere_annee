@@ -76,6 +76,7 @@ int main(void)
                 montant = saisir_montant();
                 valid = montant_valide(montant);
             }
+            calcul_distribution(montant);
             break;
         
         case 2:
@@ -89,8 +90,5 @@ int main(void)
         }
         menu=3;
     }
-    
-
-    
     return 0;
 }

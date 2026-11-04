@@ -160,4 +160,47 @@ int montant_valide(int montant)
         return 1;
 }
 
-void calcul_distribution(int montant);
+void calcul_distribution(int montant)
+{
+    int cinquante = 0;
+    int vingt = 0;
+    int dix = 0;
+    int cinq = 0;
+    while (montant != 0)
+    {        
+        if (montant >= 50)
+        {
+            cinquante ++;
+            montant = montant - 50;
+        } else if (montant >= 20)
+        {
+            vingt ++;
+            montant = montant - 20;
+        } else if (montant >= 10)
+        {
+            dix ++;
+            montant = montant - 10;
+        } else {
+            cinq ++;
+            montant = montant - 5;
+        }
+    }
+    printf("Billets distribues : \n");
+    if (cinquante > 0)
+    {
+    printf("%d billets de 50 euros \n",cinquante);
+    }
+    if (vingt > 0)
+    {
+    printf("%d billets de 20 euros \n",vingt);
+    }
+    if (dix > 0)
+    {
+    printf("%d billets de 10 euros \n",dix);
+    }
+    if (cinq > 0)
+    {
+    printf("%d billets de 5 euros \n",cinq);
+    }
+    printf("\n");
+}
