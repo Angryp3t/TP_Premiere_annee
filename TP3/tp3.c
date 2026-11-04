@@ -10,8 +10,9 @@ int main(void)
     int id=0;
     int tableau[30][3];
     int nb=0;
+    int quitter =1;
     printf("Vous etes de base sur le menue de l'exo 1, pour passez à l'exo 2 appuyez sur quitter.\n");
-    while (menu ==7)
+    while (menu == 7 && quitter == 1)
     {    
         affichage_options();
         scanf("%d",&menu);
@@ -47,6 +48,7 @@ int main(void)
             afficherMeilleuresNotes (nb, tableau);
             break;
         case 0:
+            quitter=0;
             break;
         default:
             printf("Incomprehensible : reessayez\n");
@@ -56,6 +58,29 @@ int main(void)
     //==============================================    
     // Exo 2 =======================================
     //============================================== 
+    printf("Voici L'exo 2 :");
+    menu = 3;
+    while (menu==3)
+    {
+        afficher_menu();
+        printf("Votre choix : ");
+        scanf("%d",menu);
+        printf("\n");
+        switch (menu)
+        {
+        case 1:
+            break;
+        
+        case 0:
+            return 0;
+            break;
+
+        default:
+            printf("Choix invalide veuillez retentez.\n");
+            break;
+        }
+    }
+    
 
     
     return 0;

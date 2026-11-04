@@ -134,7 +134,12 @@ void afficherMeilleuresNotes (int nb, int tab[30][3])
 // Exo 2 =======================================
 //============================================== 
 
-void afficher_menu(void);
+void afficher_menu(void)
+{
+    printf("=== BANQUE - Distributeur ===\n");
+    printf("1 - Faire un retrait");
+    printf("2 - Quitter");
+}
 int saisir_montant(void);
 int montant_valide(int montant);
 void calcul_distribution(int montant);
