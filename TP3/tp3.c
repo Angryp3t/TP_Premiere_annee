@@ -66,10 +66,16 @@ int main(void)
         printf("Votre choix : ");
         scanf("%d",&menu);
         printf("\n");
+        int valid = 0;
+        int montant=0;
         switch (menu)
         {
         case 1:
-            saisir_montant();
+            while (valid == 0)
+            {
+                montant = saisir_montant();
+                valid = montant_valide(montant);
+            }
             break;
         
         case 2:
