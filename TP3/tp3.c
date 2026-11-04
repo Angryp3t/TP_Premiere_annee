@@ -69,6 +69,7 @@ int main(void)
         switch (menu)
         {
         case 1:
+            saisir_montant();
             break;
         
         case 2:

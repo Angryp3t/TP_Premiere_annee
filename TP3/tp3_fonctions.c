@@ -140,6 +140,14 @@ void afficher_menu(void)
     printf("1 - Faire un retrait\n");
     printf("2 - Quitter\n");
 }
-int saisir_montant(void);
+int saisir_montant(void)
+{   
+    int montant;
+    printf("Montant a retirer :");
+    scanf("%d",&montant);
+    printf("\n");
+    return montant;
+}
+
 int montant_valide(int montant);
 void calcul_distribution(int montant);
