@@ -56,7 +56,10 @@ void remplissage_pointe(char img[30][101], int n, int w){
                 else 
                     {img[i][j]='S';}
             }
-            else 
+            else if (i == n-1)
+            {
+                img[i][j]='_';
+            } else
                 {img[i][j]=' ';}
         }
         count++;
