@@ -117,7 +117,7 @@ void remplissage_jambes(char img[30][101], int n, int w){
                 {img[i][j]=' ';}
         }
         side_count--;
-        mid_count = side_count+2;
+        mid_count = mid_count+2;
     }
     return;
 }
