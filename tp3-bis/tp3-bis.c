@@ -10,6 +10,7 @@ int main(void){
     printf("%d \n",size);
     remplissage_pointe(img, size, widht);
     remplissage_corps(img, size, widht);
+    remplissage_jambes(img, size, widht);
     affichage_star(img,widht,max_height);
 
     return 0;

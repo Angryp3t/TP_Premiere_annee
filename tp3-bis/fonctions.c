@@ -89,3 +89,35 @@ void remplissage_corps(char img[30][101], int n, int w){
     }
     return;
 }
+
+void remplissage_jambes(char img[30][101], int n, int w){
+    int mid = w / 2;
+    int mid_count = 2;
+    int side_count = n-1;
+    for (int i = n*2; i < n*3; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            if(j >= side_count && j <= (w-side_count-1)){
+                if (j==(side_count) || j == (w-side_count-1))
+                {
+                    img[i][j]='.';
+                }
+                else if (j==(mid-mid_count) || j==(mid+mid_count))
+                {
+                    img[i][j]='"';
+                }
+                else if (j>(mid-mid_count) && j< (mid+mid_count))
+                {
+                    img[i][j] = ' ';
+                } else
+                    {img[i][j]='S';}
+            }
+            else
+                {img[i][j]=' ';}
+        }
+        side_count--;
+        mid_count = side_count+2;
+    }
+    return;
+}
