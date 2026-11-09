@@ -29,3 +29,13 @@ void creation_blank_tab(char img[30][101],int w, int h){
     }
     return;
 }
+void affichage_star(char img[30][101], int w, int h){
+    for (int i = 0; i < h; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            printf("%c",img[i][j]);
+        }
+    }
+    return;
+}
