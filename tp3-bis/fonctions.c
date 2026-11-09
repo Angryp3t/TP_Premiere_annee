@@ -36,6 +36,30 @@ void affichage_star(char img[30][101], int w, int h){
         {
             printf("%c",img[i][j]);
         }
+        printf("\n");
+    }
+    return;
+}
+
+void remplissage_pointe(char img[30][101], int n, int w){
+    int mid = w / 2;
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            if((mid-count) <= j && j <= (mid+count)){
+                if (j==(mid-count) || j == (mid+count))
+                {
+                    img[i][j]='A';
+                } 
+                else 
+                    {img[i][j]='S';}
+            }
+            else 
+                {img[i][j]=' ';}
+        }
+        count++;
     }
     return;
 }

@@ -8,5 +8,8 @@ int main(void){
     char img[30][101];
     creation_blank_tab(img,widht,max_height);
     printf("%d \n",size);
+    remplissage_pointe(img, size, widht);
+    affichage_star(img,widht,max_height);
+
     return 0;
 }
