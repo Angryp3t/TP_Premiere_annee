@@ -9,6 +9,7 @@ int main(void){
     creation_blank_tab(img,widht,max_height);
     printf("%d \n",size);
     remplissage_pointe(img, size, widht);
+    remplissage_corps(img, size, widht);
     affichage_star(img,widht,max_height);
 
     return 0;

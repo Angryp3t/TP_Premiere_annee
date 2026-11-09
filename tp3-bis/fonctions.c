@@ -66,3 +66,26 @@ void remplissage_pointe(char img[30][101], int n, int w){
     }
     return;
 }
+
+void remplissage_corps(char img[30][101], int n, int w){
+    int n_deux = n*2;
+    int count = 0;
+    for (int i = n; i < n_deux; i++)
+    {
+        for (int j = 0; j < w; j++)
+        {
+            if(j >= count && j <= (w-count-1)){
+                if (j==(count) || j == (w-count-1))
+                {
+                    img[i][j]='.';
+                }
+                else 
+                    {img[i][j]='S';}
+            }
+            else
+                {img[i][j]=' ';}
+        }
+        count++;
+    }
+    return;
+}
