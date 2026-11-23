@@ -7,5 +7,6 @@ Conso initialiser(){
     Conso a={
         0,0,0,0,0,0,0
     };
+    printf("😀 c'est fini !");
     return a;
 }
