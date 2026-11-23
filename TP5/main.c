@@ -1,4 +1,5 @@
 #include <windows.h> 
+#include "fonction.h"
 #include <locale.h> 
 #include <stdio.h>
 #include "fonction.h"
