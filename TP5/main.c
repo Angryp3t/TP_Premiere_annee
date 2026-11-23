@@ -18,6 +18,8 @@ int main(){
         "Protéines 🍗"};
     Conso a = initialiser();
 
+    Objectifs obj = {8, 5, 3, 2};
+
     int choix;
 
     do {
@@ -32,9 +34,11 @@ int main(){
             case 2:
                 AfficheResume(a);
                 break;
-
             case 3:
-                printf("Sauvegarde et fermeture du programme\n");
+                
+                break;
+            case 4:
+                printf("Sauvegarde et quittez\n");
                 break;
 
             default:

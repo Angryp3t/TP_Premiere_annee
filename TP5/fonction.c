@@ -10,7 +10,8 @@ void AfficherMenu(){
     printf("==========================\n");
     printf("1. Ajouetr une consommation\n");
     printf("2. Afficher le resume du jour\n");
-    printf("3. Sauvegarder et quitter \n");
+    printf("3. Afficher les objectifs et le score\n");
+    printf("4. Sauvegarder et quitter \n");
 }
 
 int LireChoix() {
@@ -26,19 +27,19 @@ int LireChoix() {
 void AfficheResume(Conso a){
     printf("========== Resume du jour ==========\n");
     printf("Eau       :   %d   💧",a.eau);
-    AfficherBarre(a.eau, 10);
+    AfficherBarre(a.eau, 30);
     printf("Cafe      :   %d   ☕",a.cafe);
     AfficherBarre(a.cafe, 10);
     printf("Bonbons   :   %d   🍬",a.bonbons);
     AfficherBarre(a.bonbons, 10);
     printf("Gateau    :   %d   🍰",a.gateaux);
-    AfficherBarre(a.gateaux, 10);
+    AfficherBarre(a.gateaux, 20);
     printf("Legumes   :   %d   🥦",a.legumes);
-    AfficherBarre(a.legumes, 10);
+    AfficherBarre(a.legumes, 15);
     printf("Fruits    :   %d   🍎",a.fruits);
     AfficherBarre(a.fruits, 10);
     printf("Proteines :   %d   🍗",a.proteines);
-    AfficherBarre(a.proteines, 10);
+    AfficherBarre(a.proteines, 20);
     printf("====================================\n");
 
 }
@@ -70,7 +71,7 @@ void AfficherBarre(int val, int max){
 
 Conso initialiser(){
     Conso a={
-        0,0,0,0,0,0,0
+        22,0,5,18,12,6,8
     };
     return a;
 }

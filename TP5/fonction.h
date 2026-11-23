@@ -18,6 +18,13 @@ typedef struct Conso
     int proteines;
 }Conso;
 
+typedef struct Objectifs{
+    int eau;
+    int legumes;
+    int fruits;
+    int proteines;
+} Objectifs;
+
 Conso initialiser();
 Conso ajouterConsommation(Conso a, char consommes[7][50]);
 
