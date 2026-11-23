@@ -2,6 +2,7 @@
 #include <locale.h> 
 #include <stdio.h>
 #include "fonction.h"
+#include <string.h>
 
 
 void AfficherMenu(){
