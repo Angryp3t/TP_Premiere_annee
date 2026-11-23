@@ -4,7 +4,7 @@
 
 void AfficherMenu();
 int LireChoix();
-
+void AfficheResume();
 
 typedef struct Conso
 {

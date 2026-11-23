@@ -22,7 +22,7 @@ int main(){
                 break;
 
             case 2:
-                printf("Afficher le resume du jour\n");
+                AfficheResume(a);
                 break;
 
             case 3:
