@@ -110,7 +110,7 @@ void AfficherBarre(int val, int max){
 
 Conso initialiser(){
     Conso a={
-        22,0,5,18,12,6,8
+        0,0,0,0,0,0,0
     };
     return a;
 }
@@ -129,12 +129,12 @@ Conso ajouterConsommation(Conso a,char consommes[7][50]){
         printf("\nCombien d'unités ajouter ?");
     scanf("%d",&nb);
     getchar();
-    printf("Consommation mise à jour.");
+    printf("Consommation mise à jour. \n");
     
     switch (choix)
         {
         case 1:
-            a.eau += nb;
+            a.eau = a.eau + nb;
             break;
         case 2:
             a.cafe += nb;
