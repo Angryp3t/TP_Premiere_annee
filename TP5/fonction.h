@@ -4,7 +4,7 @@
 
 void AfficherMenu();
 int LireChoix();
-void AfficheResume();
+void AfficheResume(Conso a, char humeur[7][50]);
 
 typedef struct Conso
 {
@@ -19,5 +19,6 @@ typedef struct Conso
 
 Conso initialiser();
 Conso ajouterConsommation(Conso a, char consommes[7][50]);
+void HumeurBonbons(Conso a,char humeur[7][50]);
 
 #endif
