@@ -10,7 +10,8 @@ void AfficherMenu(){
     printf("==========================\n");
     printf("1. Ajouetr une consommation\n");
     printf("2. Afficher le resume du jour\n");
-    printf("3. Sauvegarder et quitter \n");
+    printf("3. Afficher les objectifs et le score\n");
+    printf("4. Sauvegarder et quitter \n");
 }
 
 int LireChoix() {
@@ -109,7 +110,7 @@ void AfficherBarre(int val, int max){
 
 Conso initialiser(){
     Conso a={
-        0,0,0,0,0,0,0
+        22,0,5,18,12,6,8
     };
     return a;
 }

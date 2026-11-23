@@ -19,6 +19,8 @@ int main(){
     Conso a = initialiser();
     char humeur[7][50]={"😭","😇","😇","😇","🤔","😢","🌈",};
 
+    Objectifs obj = {8, 5, 3, 2};
+
     int choix;
 
     do {
@@ -34,10 +36,11 @@ int main(){
             case 2:
                 AfficheResume(a,humeur);
                 break;
-
             case 3:
-                printf("Sauvegarde et fermeture du programme\n");
-                return 0;
+                break;
+            case 4:
+                printf("Sauvegarde et quittez\n");
+                break;
 
             default:
                 printf("Choix invalide, recommencez.\n");
