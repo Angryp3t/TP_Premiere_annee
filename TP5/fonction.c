@@ -25,13 +25,20 @@ int LireChoix() {
 
 void AfficheResume(Conso a, char humeur[7][50]){
     printf("========== Resume du jour ==========\n");
-    printf("Eau       :   %d   💧\n",a.eau);
-    printf("Cafe      :   %d   ☕\n",a.cafe);
-    printf("Bonbons   :   %d   🍬 %s\n",a.bonbons,HumeurBonbons(a));
-    printf("Gateau    :   %d   🍰\n",a.gateaux);
-    printf("Legumes   :   %d   🥦\n",a.legumes);
-    printf("Fruits    :   %d   🍎\n",a.fruits);
-    printf("Proteines :   %d   🍗\n",a.proteines);
+    printf("Eau       :   %d   💧",a.eau);
+    AfficherBarre(a.eau, 10);
+    printf("Cafe      :   %d   ☕",a.cafe);
+    AfficherBarre(a.cafe, 10);
+    printf("Bonbons   :   %d   🍬",a.bonbons);
+    AfficherBarre(a.bonbons, 10);
+    printf("Gateau    :   %d   🍰",a.gateaux);
+    AfficherBarre(a.gateaux, 10);
+    printf("Legumes   :   %d   🥦",a.legumes);
+    AfficherBarre(a.legumes, 10);
+    printf("Fruits    :   %d   🍎",a.fruits);
+    AfficherBarre(a.fruits, 10);
+    printf("Proteines :   %d   🍗",a.proteines);
+    AfficherBarre(a.proteines, 10);
     printf("====================================\n");
 
 }
@@ -75,6 +82,30 @@ void HumeurBonbons(Conso a,char humeur[7][50]){
         }
     }
 }
+void AfficherBarre(int val, int max){
+
+    if (max <= 0)
+    max = 1;
+    if (val < 0)
+    val = 0;
+    if (val > max)
+    val = max;
+
+    int result = (val*10)/max;
+
+    for (int i = 0; i < result ; i++)
+    {
+        printf("█");
+    }
+
+    for (int j = 0; j < 10-result; j++)
+    {
+        printf("░");
+    }
+    printf("\n");
+}
+
+
 
 Conso initialiser(){
     Conso a={

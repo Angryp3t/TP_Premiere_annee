@@ -5,6 +5,8 @@
 void AfficherMenu();
 int LireChoix();
 void AfficheResume(Conso a, char humeur[7][50]);
+void AfficheResume();
+void AfficherBarre(int val, int max);
 
 typedef struct Conso
 {
