@@ -3,6 +3,8 @@
 
 
 void AfficherMenu();
+int LireChoix();
+
 
 typedef struct Conso
 {

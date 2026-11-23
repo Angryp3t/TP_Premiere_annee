@@ -2,7 +2,7 @@
 #include "fonction.h"
 #include <locale.h> 
 #include <stdio.h>
-#include "fonction.h"
+
 
 int main(){
     SetConsoleOutputCP(CP_UTF8); 
@@ -17,6 +17,34 @@ int main(){
         "Fruits 🍎",
         "Protéines 🍗"};
     Conso a = initialiser();
-    AfficherMenu();
+
+    int choix;
+
+    do {
+        AfficherMenu();
+        choix = LireChoix();
+
+        switch (choix) {
+            case 1:
+                printf("Ajouter une consommation\n");
+                break;
+
+            case 2:
+                printf("Afficher le resume du jour\n");
+                break;
+
+            case 3:
+                printf("Sauvegarde et fermeture du programme\n");
+                break;
+
+            default:
+                printf("Choix invalide, recommencez.\n");
+        }
+
+        printf("\n");
+
+    } while (choix != 3);
+
     return 0;
+
 }
