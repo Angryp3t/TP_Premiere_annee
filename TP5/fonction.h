@@ -12,4 +12,6 @@ typedef struct Conso
     int proteines;
 }Conso;
 
+Conso initialiser();
+
 #endif
