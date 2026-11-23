@@ -25,19 +25,19 @@ int LireChoix() {
 
 void AfficheResume(Conso a, char humeur[7][50]){
     printf("========== Resume du jour ==========\n");
-    printf("Eau       :   %d   💧",a.eau);
+    printf("Eau       :   %d   💧 %s",a.eau, humeur[0]);
     AfficherBarre(a.eau, 10);
-    printf("Cafe      :   %d   ☕",a.cafe);
+    printf("Cafe      :   %d   ☕ %s",a.cafe, humeur[1]);
     AfficherBarre(a.cafe, 10);
-    printf("Bonbons   :   %d   🍬",a.bonbons);
+    printf("Bonbons   :   %d   🍬 %s",a.bonbons, humeur[2]);
     AfficherBarre(a.bonbons, 10);
-    printf("Gateau    :   %d   🍰",a.gateaux);
+    printf("Gateau    :   %d   🍰 %s",a.gateaux, humeur[3]);
     AfficherBarre(a.gateaux, 10);
-    printf("Legumes   :   %d   🥦",a.legumes);
+    printf("Legumes   :   %d   🥦 %s",a.legumes, humeur[4]);
     AfficherBarre(a.legumes, 10);
-    printf("Fruits    :   %d   🍎",a.fruits);
+    printf("Fruits    :   %d   🍎 %s",a.fruits, humeur[5]);
     AfficherBarre(a.fruits, 10);
-    printf("Proteines :   %d   🍗",a.proteines);
+    printf("Proteines :   %d   🍗 %s",a.proteines, humeur[6]);
     AfficherBarre(a.proteines, 10);
     printf("====================================\n");
 
@@ -120,7 +120,7 @@ Conso ajouterConsommation(Conso a,char consommes[7][50]){
     printf("Quelle catégorie voulez vous modifier ?\n");
     for (int i = 0; i < 7; i++)
     {        
-        printf("%d. %s \n",i+1,consommes[1]);    
+        printf("%d. %s \n",i+1,consommes[i]);    
     }
     printf("\nVotre choix :");
     scanf("%d",&choix);
@@ -130,7 +130,7 @@ Conso ajouterConsommation(Conso a,char consommes[7][50]){
     getchar();
     printf("Consommation mise à jour.");
     
-    switch (choix < 1 || choix > 7)
+    switch (choix)
         {
         case 1:
             a.eau += nb;

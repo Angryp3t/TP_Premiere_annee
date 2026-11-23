@@ -28,6 +28,7 @@ int main(){
         switch (choix) {
             case 1:
                 printf("Ajouter une consommation\n");
+                ajouterConsommation(a,consommes);
                 break;
 
             case 2:
@@ -36,7 +37,7 @@ int main(){
 
             case 3:
                 printf("Sauvegarde et fermeture du programme\n");
-                break;
+                return 0;
 
             default:
                 printf("Choix invalide, recommencez.\n");
