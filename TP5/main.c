@@ -30,7 +30,7 @@ int main(){
         switch (choix) {
             case 1:
                 printf("Ajouter une consommation\n");
-                a = ajouterConsommation(a, consommes);
+                a=ajouterConsommation(a,consommes);
                 break;
 
             case 2:
