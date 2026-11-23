@@ -5,6 +5,7 @@
 void AfficherMenu();
 int LireChoix();
 void AfficheResume();
+void AfficherBarre(int val, int max);
 
 typedef struct Conso
 {
