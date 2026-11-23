@@ -199,9 +199,42 @@ void AfficherObjectifsEtScore(Conso a, Objectifs obj) {
 
 int calculerScoreSante(Conso a, Objectifs obj) {
     int score = 50;
+    int malus;
 
-    // Ajouter ici les bonus et malus
+    // Bonus des objectifs atteints
+    if (a.eau >= obj.eau)
+        score += 10;
 
+    if (a.legumes >= obj.legumes)
+        score += 10;
+
+    if (a.fruits >= obj.fruits)
+        score += 10;
+
+    if (a.proteines >= obj.proteines)
+        score += 10;
+
+    // Malus des bonbons
+    if (a.bonbons > 5) {
+        malus = a.bonbons - 5;
+
+        if (malus > 15)
+            malus = 15;
+
+        score -= malus;
+    }
+
+    // Malus du cafe
+    if (a.cafe > 3) {
+        malus = (a.cafe - 3) * 2;
+
+        if (malus > 20)
+            malus = 20;
+
+        score -= malus;
+    }
+
+    // Limiter le score entre 0 et 100
     if (score > 100)
         score = 100;
 
