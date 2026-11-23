@@ -201,7 +201,6 @@ int calculerScoreSante(Conso a, Objectifs obj) {
     int score = 50;
     int malus;
 
-    // Bonus des objectifs atteints
     if (a.eau >= obj.eau)
         score += 10;
 
@@ -213,8 +212,7 @@ int calculerScoreSante(Conso a, Objectifs obj) {
 
     if (a.proteines >= obj.proteines)
         score += 10;
-
-    // Malus des bonbons
+   
     if (a.bonbons > 5) {
         malus = a.bonbons - 5;
 
@@ -224,7 +222,6 @@ int calculerScoreSante(Conso a, Objectifs obj) {
         score -= malus;
     }
 
-    // Malus du cafe
     if (a.cafe > 3) {
         malus = (a.cafe - 3) * 2;
 
@@ -234,7 +231,6 @@ int calculerScoreSante(Conso a, Objectifs obj) {
         score -= malus;
     }
 
-    // Limiter le score entre 0 et 100
     if (score > 100)
         score = 100;
 
