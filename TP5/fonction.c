@@ -21,5 +21,9 @@ Conso initialiser(){
 }
 
 Conso ajouterConsommation(Conso a,char consommes[7][50]){
-    printf("Quelle catégorie voulez vous modifier ?\n");
+    for (int i = 0; i < 7; i++)
+    {
+        printf("Quelle catégorie voulez vous modifier ?\n");
+        
+    }    
 }
