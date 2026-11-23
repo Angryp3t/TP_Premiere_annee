@@ -18,6 +18,7 @@ int LireChoix() {
 
     printf("Votre choix : ");
     scanf("%d", &choix);
+    getchar();
 
     return choix;
 }
@@ -32,6 +33,17 @@ void AfficheResume(Conso a){
     printf("Fruits    :   %d   🍎\n",a.fruits);
     printf("Proteines :   %d   🍗\n",a.proteines);
     printf("====================================\n");
+
+}
+
+char HumeurBonbons(Conso a){
+    char bonbon;
+    if (a.bonbons < 3)
+        bonbon = "😭";
+    else if (a.bonbons < 7)
+        bonbon = "😀";
+    else
+        bonbon = "🌈";
 
 }
 
