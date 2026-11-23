@@ -196,3 +196,17 @@ void AfficherObjectifsEtScore(Conso a, Objectifs obj) {
     else
         printf("❌\n");
 }
+
+int calculerScoreSante(Conso a, Objectifs obj) {
+    int score = 50;
+
+    // Ajouter ici les bonus et malus
+
+    if (score > 100)
+        score = 100;
+
+    if (score < 0)
+        score = 0;
+
+    return score;
+}

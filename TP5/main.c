@@ -39,6 +39,7 @@ int main(){
                 break;
             case 3:
                 AfficherObjectifsEtScore(a, obj);
+                printf("Score de sante : %d/100\n", calculerScoreSante(a, obj));
                 break;
             case 4:
                 printf("Sauvegarde et quittez\n");
