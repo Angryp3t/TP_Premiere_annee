@@ -13,6 +13,15 @@ void AfficherMenu(){
     printf("3. Sauvegarder et quitter \n");
 }
 
+int LireChoix() {
+    int choix;
+
+    printf("Votre choix : ");
+    scanf("%d", &choix);
+
+    return choix;
+}
+
 Conso initialiser(){
     Conso a={
         0,0,0,0,0,0,0
