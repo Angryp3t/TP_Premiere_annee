@@ -18,6 +18,6 @@ typedef struct Conso
 }Conso;
 
 Conso initialiser();
-
+Conso ajouterConsommation(Conso a, char consommes[7][50]);
 
 #endif
