@@ -2,7 +2,7 @@
 #include "fonction.h"
 #include <locale.h> 
 #include <stdio.h>
-
+#include <string.h>
 
 int main(){
     SetConsoleOutputCP(CP_UTF8); 
@@ -30,13 +30,15 @@ int main(){
         switch (choix) {
             case 1:
                 printf("Ajouter une consommation\n");
-                ajouterConsommation(a,consommes);
+                a = ajouterConsommation(a, consommes);
                 break;
 
             case 2:
-                AfficheResume(a,humeur);
+                HumeurBonbons(a, humeur);
+                AfficheResume(a, humeur);
                 break;
             case 3:
+                printf("Afficher les objectifs et le score");
                 break;
             case 4:
                 printf("Sauvegarde et quittez\n");
@@ -48,7 +50,7 @@ int main(){
 
         printf("\n");
 
-    } while (choix != 3);
+    } while (choix != 4);
 
     return 0;
 
