@@ -1,6 +1,9 @@
 #ifndef CORR
 #define CORR
 
+
+void AfficherMenu();
+
 typedef struct Conso
 {
     int eau;
@@ -13,5 +16,6 @@ typedef struct Conso
 }Conso;
 
 Conso initialiser();
+
 
 #endif
