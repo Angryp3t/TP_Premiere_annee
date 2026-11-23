@@ -38,7 +38,7 @@ int main(){
                 AfficheResume(a, humeur);
                 break;
             case 3:
-                printf("Afficher les objectifs et le score");
+                AfficherObjectifsEtScore(a, obj);
                 break;
             case 4:
                 printf("Sauvegarde et quittez\n");

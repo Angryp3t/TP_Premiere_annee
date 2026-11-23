@@ -26,6 +26,6 @@ void AfficherMenu();
 int LireChoix();
 void AfficheResume(Conso a, char humeur[7][50]);
 void AfficherBarre(int val, int max);
-
+void AfficherObjectifsEtScore(Conso a, Objectifs obj);
 
 #endif

@@ -111,7 +111,7 @@ void AfficherBarre(int val, int max){
 
 Conso initialiser(){
     Conso a={
-        22,0,5,18,12,6,8
+        0,0,0,0,0,0,0
     };
     return a;
 }
@@ -161,4 +161,38 @@ Conso ajouterConsommation(Conso a,char consommes[7][50]){
             break;
         }
     return a;
+}
+
+void AfficherObjectifsEtScore(Conso a, Objectifs obj) {
+
+    printf("===== Objectifs du jour =====\n");
+    printf("Categorie   Objectif  Atteint ?\n\n");
+
+    printf("Eau       :   %d      ", obj.eau);
+    if (a.eau >= obj.eau)
+        printf("✅\n");
+    else
+        printf("❌\n");
+
+    printf("Cafe      :   -      (pas d'objectif)\n");
+    printf("Bonbons   :   -      (pas d'objectif)\n");
+    printf("Gateau    :   -      (pas d'objectif)\n");
+
+    printf("Legumes   :   %d      ", obj.legumes);
+    if (a.legumes >= obj.legumes)
+        printf("✅\n");
+    else
+        printf("❌\n");
+
+    printf("Fruits    :   %d      ", obj.fruits);
+    if (a.fruits >= obj.fruits)
+        printf("✅\n");
+    else
+        printf("❌\n");
+
+    printf("Proteines :   %d      ", obj.proteines);
+    if (a.proteines >= obj.proteines)
+        printf("✅\n");
+    else
+        printf("❌\n");
 }
