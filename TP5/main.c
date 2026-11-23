@@ -17,6 +17,7 @@ int main(){
         "Fruits 🍎",
         "Protéines 🍗"};
     Conso a = initialiser();
+    char humeur[7][50]={"😭","😇","😇","😇","🤔","😢","🌈",};
 
     Objectifs obj = {8, 5, 3, 2};
 
@@ -32,7 +33,7 @@ int main(){
                 break;
 
             case 2:
-                AfficheResume(a);
+                AfficheResume(a,humeur);
                 break;
             case 3:
                 

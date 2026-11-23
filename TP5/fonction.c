@@ -24,7 +24,7 @@ int LireChoix() {
     return choix;
 }
 
-void AfficheResume(Conso a){
+void AfficheResume(Conso a, char humeur[7][50]){
     printf("========== Resume du jour ==========\n");
     printf("Eau       :   %d   💧",a.eau);
     AfficherBarre(a.eau, 30);
@@ -44,6 +44,45 @@ void AfficheResume(Conso a){
 
 }
 
+void HumeurBonbons(Conso a,char humeur[7][50]){
+    int cons[7]={a.eau,a.cafe,a.bonbons,a.gateaux,a.legumes,a.fruits,a.proteines};
+    for (int i = 0; i < 7; i++)
+    {
+        switch (i)
+        //"😭","😇","😇","😇","😢","😢","🌈"
+        {
+        case 0:
+            if (cons[i]<3){strcpy(humeur[i], "😭");}
+            else if (cons[i]<7){strcpy(humeur[i],"😢");}
+            else if (cons[i]<12){strcpy(humeur[i],"🥲");}
+            else {strcpy(humeur[i],"😁");}
+            break;
+        case 1:
+        case 2:
+        case 3:
+            if (cons[i]<3){strcpy(humeur[i], "😇");}
+            else if (cons[i]<7){strcpy(humeur[i],"😊");}
+            else if (cons[i]<12){strcpy(humeur[i],"😕");}
+            else {strcpy(humeur[i],"💀");}
+            break;
+        case 4:
+        case 5:
+            if (cons[i]<3){strcpy(humeur[i], "😢");}
+            else if (cons[i]<7){strcpy(humeur[i],"🥲");}
+            else if (cons[i]<12){strcpy(humeur[i],"😝");}
+            else {strcpy(humeur[i],"🥳");}
+            break;
+        case 6:
+            if (cons[i]<3){strcpy(humeur[i], "🌈");}
+            else if (cons[i]<7){strcpy(humeur[i],"😐");}
+            else if (cons[i]<12){strcpy(humeur[i],"😶");}
+            else {strcpy(humeur[i],"💀🩸");}
+            break;
+        default:
+            break;
+        }
+    }
+}
 void AfficherBarre(int val, int max){
 
     if (max <= 0)

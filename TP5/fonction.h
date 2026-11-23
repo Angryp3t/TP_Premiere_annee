@@ -4,6 +4,7 @@
 
 void AfficherMenu();
 int LireChoix();
+void AfficheResume(Conso a, char humeur[7][50]);
 void AfficheResume();
 void AfficherBarre(int val, int max);
 
@@ -27,5 +28,6 @@ typedef struct Objectifs{
 
 Conso initialiser();
 Conso ajouterConsommation(Conso a, char consommes[7][50]);
+void HumeurBonbons(Conso a,char humeur[7][50]);
 
 #endif
