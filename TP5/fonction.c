@@ -57,9 +57,48 @@ Conso initialiser(){
 }
 
 Conso ajouterConsommation(Conso a,char consommes[7][50]){
+    int choix=0;
+    int nb=0;
+    printf("Quelle catégorie voulez vous modifier ?\n");
     for (int i = 0; i < 7; i++)
-    {
-        printf("Quelle catégorie voulez vous modifier ?\n");
+    {        
+        printf("%d. %s \n",i+1,consommes[1]);    
+    }
+    printf("\nVotre choix :");
+    scanf("%d",&choix);
+    getchar();
+        printf("\nCombien d'unités ajouter ?");
+    scanf("%d",&nb);
+    getchar();
+    printf("Consommation mise à jour.");
+    
+    switch (choix < 1 || choix > 7)
+        {
+        case 1:
+            a.eau += nb;
+            break;
+        case 2:
+            a.cafe += nb;
+            break;
+        case 3:
+            a.bonbons += nb;
+            break;
+        case 4:
+            a.gateaux += nb;
+            break;
+        case 5:
+            a.legumes += nb;
+            break;
+        case 6:
+            a.fruits += nb;
+            break;
+        case 7:
+            a.proteines += nb;
+            break;
         
-    }    
+        default:
+            printf("Choix invalide ressaye eeeeeeeeeeeeuh......");
+            break;
+        }
+    return a;
 }
